@@ -89,19 +89,9 @@ See sample csv and txt stat files for details
              Ball [4] was picked 6.15% of the time (56 instances)
              Ball [9] was picked 5.16% of the time (47 instances)
     etc...
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-.
-_<sup>1</sup> Not really. No rocket science to beat your lottery odds here._
 
-_<sup>2</sup> You knew that was a joke._
+
+
+_<sup>1 Not really. No rocket science to beat your lottery odds here.</sup>_
+
+_<sup>2 You knew that was a joke.</sup>_
