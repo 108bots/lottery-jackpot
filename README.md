@@ -125,4 +125,4 @@ See sample csv and txt stat files for details
 
 _<sup>1</sup> Not really. No rocket science to beat your lottery odds here._
 
-_<sup>2</sup> You knew I was joking right. _
+_<sup>2</sup> You knew that was a joke._
