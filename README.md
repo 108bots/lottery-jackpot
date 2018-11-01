@@ -7,7 +7,7 @@ Fret no more. Use this _Intelligent<sup>1</sup> program_ to generate your jackpo
 On a serious note, this code does the following:
 
 - Reads a feed from https://data.ny.gov/ on historical drawing data
-- Shows some unintersting stats to show that winning numbers are fairly uniformly distributed (for the most part) 
+- Shows some unintersting stats to show that winning numbers are fairly uniformly distributed (powerball more uniform than megamillions) 
 - Generates a weighted random sequence of numbers to try your luck
 
 ## Usage
