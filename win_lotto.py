@@ -75,8 +75,7 @@ red_balls_sorted = [[0,0]]*(red_max + 1)
 red_weights_sorted = [[0,0]]*(red_max + 1)
 
 """
-    Initialize white balls count & weights tuple of lists with list index as ball number and value as count of appearences with 
-    index 0 being a dummy
+    Initialize white balls count & weights as list of lists [[x,y], [] ..] with x as index or ball number and y as value as count of appearences
     List 0 - 4 in the tuple hold white balls seen in each of the 5 draws
     List 5 holds white balls seen any of the 5 draws
 """
