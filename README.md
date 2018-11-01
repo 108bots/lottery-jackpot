@@ -13,7 +13,7 @@ On a serious note, this code does the following:
 ## Usage
 
     > python win_lotto.py --help
-    usage: win_lotto.py [-h] --lotto LOTTO [--draw_aware] [--stats] [--jackpot]
+    usage: win_lotto.py [-h] --lotto LOTTO [--draw_aware] [--stats] [--jackpot] [--greedy]
 
     $$ Generate winning numbers for Megamillions & Powerball based on previous draws $$
 
@@ -23,6 +23,8 @@ On a serious note, this code does the following:
       --draw_aware   If specified, white ball selection based on occurence in a draw position.
       --stats        If specified, will dump stats on all the numbers to CONSOLE and CSV. Required if --jackpot is not specified.
       --jackpot      If specified, will generate a JACKPOT worthy sequence of numbers. Required if --stats is not specified.
+      --greedy       If specified, will only use above MEDIAN occuring numbers in JACKPOT sequence generation. Applicable only with -- 
+                     jackpot argument.
 
 ## Examples
 
