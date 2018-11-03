@@ -75,7 +75,8 @@ red_balls_sorted = [[0,0]]*(red_max + 1)
 red_weights_sorted = [[0,0]]*(red_max + 1)
 
 """
-    Initialize white balls count & weights as list of lists [[x,y], [] ..] with x as index or ball number and y as value as count of appearences
+    Initialize white balls count & weights tuple of lists with list index as ball number and value as count of appearences with 
+    index 0 being a dummy
     List 0 - 4 in the tuple hold white balls seen in each of the 5 draws
     List 5 holds white balls seen any of the 5 draws
 """
@@ -208,20 +209,20 @@ if args.jackpot:
     """
        Draw the 5 lucky whites
     """
-    lucky_whites = [0]*len(white_weights_sorted)
+    lucky_whites = [0]*(len(white_weights_sorted)-1)
 
     if not args.draw_aware:
         if args.greedy:
             white_weights_candidate = white_weights_sorted[5][0:int(len(white_weights_sorted[5])/2)+1]
         else:
             white_weights_candidate = white_weights_sorted[5]
-        for i in range(len(white_weights_sorted)):
+        for i in range(len(white_weights_sorted)-1):
             pick = weighted_random_ball(white_weights_candidate)
             while pick in lucky_whites:
                 pick = weighted_random_ball(white_weights_candidate)
             lucky_whites[i] = pick
     else:
-        for i in range(len(white_weights_sorted)):
+        for i in range(len(white_weights_sorted)-1):
             if args.greedy:
                 white_weights_candidate = white_weights_sorted[i][0:int(len(white_weights_sorted[i])/2)+1]
             else:
