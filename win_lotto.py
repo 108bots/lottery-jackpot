@@ -153,52 +153,52 @@ for itr in range(len(white_balls_sorted)):
     Dump Stats
 """
 if args.stats:
-    print "\n########## RED BALL STATS #################"
-    print "Number of Draws: %s" % red_draws
+    print ("\n########## RED BALL STATS #################")
+    print ("Number of Draws: %s") % (red_draws)
     red_file_name = lotto+'_red_ball.csv'
     with open(red_file_name, mode='w') as red_file:
         red_writer = csv.writer(red_file, delimiter=',')
         red_writer.writerow(['Ball','Times Drawn', 'Percentage Drawn'])
-        print "    Lucky"
-        print "    ^"
-        print "    |"
+        print ("    Lucky")
+        print ("    ^")
+        print ("    |")
         for i in range(len(red_balls_sorted)):
             if red_balls_sorted[i][0] == 0:
                 continue
             if i == round(len(red_balls_sorted)/2):
-                print "    |\n    Neutral\n    |" 
-            print "        Ball [%s] was picked %s%s of the time (%s instances)" % (red_balls_sorted[i][0], red_weights_sorted[i][1]*100, '%', red_balls_sorted[i][1])
+                print ("    |\n    Neutral\n    |") 
+            print ("        Ball [%s] was picked %s%s of the time (%s instances)") % (red_balls_sorted[i][0], red_weights_sorted[i][1]*100, '%', red_balls_sorted[i][1])
             red_writer.writerow([red_balls_sorted[i][0], red_balls_sorted[i][1], round(red_weights_sorted[i][1]*100, 2)])
-        print "    |"
-        print "    v"
-        print "    Unlucky"
+        print ("    |")
+        print ("    v")
+        print ("    Unlucky")
     
-    print "\n########## WHITE BALL STATS ###############"
+    print ("\n########## WHITE BALL STATS ###############")
     for itr in range(len(white_balls_sorted)):
         white_file_name = lotto+'_white_balls_draw_'+str(itr+1)+'.csv'
         if itr == len(white_balls_sorted)-1:
-            print "\n    ****** ALL Draw Stats **********"
+            print ("\n    ****** ALL Draw Stats **********")
             white_file_name = lotto+'_white_balls_draw_all.csv'
         else:
-         print "\n    ****** Draw %s Stats **********" % (itr+1)
+         print ("\n    ****** Draw %s Stats **********") % (itr+1)
         
-        print "        Number of Draws: %s" % white_draws[itr]
+        print ("        Number of Draws: %s") % (white_draws[itr])
         with open(white_file_name, mode='w') as white_file:
             white_writer = csv.writer(white_file, delimiter=',')
             white_writer.writerow(['Ball','Times Drawn', 'Percentage Drawn'])        
-            print "        Lucky"
-            print "        ^"
-            print "        |"
+            print ("        Lucky")
+            print ("        ^")
+            print ("        |")
             for i in range(len(white_balls_sorted[itr])):
                 if white_balls_sorted[itr][i][0] == 0:
                     continue
                 if i == round(len(white_balls_sorted[itr])/2):
-                    print "        |\n        Neutral\n        |"                
-                print "             Ball [%s] was picked %s%s of the time (%s instances)" % (white_balls_sorted[itr][i][0], white_weights_sorted[itr][i][1]*100, '%', white_balls_sorted[itr][i][1])
+                    print ("        |\n        Neutral\n        |")                
+                print ("             Ball [%s] was picked %s%s of the time (%s instances)") % (white_balls_sorted[itr][i][0], white_weights_sorted[itr][i][1]*100, '%', white_balls_sorted[itr][i][1])
                 white_writer.writerow([white_balls_sorted[itr][i][0], white_balls_sorted[itr][i][1], round(white_weights_sorted[itr][i][1]*100, 2)])
-            print "        |"
-            print "        v"
-            print "        Unlucky"
+            print ("        |")
+            print ("        v")
+            print ("        Unlucky")
 
 
 
@@ -249,10 +249,8 @@ if args.jackpot:
     if lotto == 'power':
         banner = 'POWERBALL'
 
-    print "\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-    print " Your JACKPOT numbers for %s" % banner
-    print " WHITE BALLS: %s" % lucky_whites
-    print " %sBALL: %s" % (lotto.upper(), lucky_red)
-    print "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-
-
+    print ("\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+    print (" Your JACKPOT numbers for ", banner)
+    print (" WHITE BALLS: ", lucky_whites)
+    print (" ", lotto.upper(), " BALL: ", lucky_red)
+    print ("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
